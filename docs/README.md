@@ -96,28 +96,49 @@ Herbie wiring is straight-forward, as follows:
 
 
 # Preflight checklist - Herbie
------------------------------
+
 Herbicide bottle full?
+
 Blue marker dye added?
+
 Handheld Radio = ON
+
 Herbie chassis and radio = ON
+
 Drive to and park on lawn.
+
 Herbicide bottletop valve = ON
+
 Herbicide wand nozzle tip = ON
+
 USB hub push button = ON
+
 Check that Blue LED is ON
+
 Prime Pump = ON (until spraying) then OFF
+
 Pump switch on radio = ON
+
 Servo switch = ON
+
 Plug in Raspberry Pi
+
 Turn on laptop computer
+
 Connect to Raspi over ssh
+
 Start up software on Raspi
+
 Is wand moving? Good. Finally,
+
 Drive forward to spray weeds
+
 Ensure spray wand is swinging and spray is spraying
+
 Drive at even speed, straight ahead
+
 Try to keep middle LED on
+
 (Herbie v.1) Turn off pump when turning around at end of pass
 
 
@@ -125,35 +146,66 @@ Try to keep middle LED on
 # Sample screen output:
 
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 Servo aim=   0.3   Spraying...   Counter=  7770
+
 Servo aim=   -0.6   Spraying...   Counter=  7771
+
 Servo aim=   -0.7   Spraying...   Counter=  7772
+
 Servo aim=   0.2   Spraying...   Counter=  7773
+
 Servo aim=   -0.1   Spraying...   Counter=  7774
+
 Servo aim=   0.2   Spraying...   Counter=  7775
+
 Servo aim=   -0.1   Spraying...   Counter=  7776
- Slow down! Thick weeds! 
+
+Slow down! Thick weeds! 
+
 Servo aim=   0.1   Spraying...   Counter=  7777
+
 Servo aim=   0.1   Spraying...   Counter=  7778
+
 Servo aim=   0.3   Spraying...   Counter=  7779
+
 Servo aim=   -0.7   Spraying...   Counter=  7780
+
 Servo aim=   0.6   Spraying...   Counter=  7781
+
 No weeds found... 
+
 Servo aim=   -0.3   Spraying...   Counter=  7783
+
 Servo aim=   -0.3   Spraying...   Counter=  7784
+
 No weeds found... 
+
 Servo aim=   -0.5   Spraying...   Counter=  7786
+
 Servo aim=   -0.5   Spraying...   Counter=  7787
+
 Servo aim=   -0.6   Spraying...   Counter=  7788
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
+
 No weeds found... 
 
