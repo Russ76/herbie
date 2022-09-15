@@ -5,6 +5,7 @@
 // to allow for more precise spray control. 
 // Spray wand moves in only one dimension, as machine moves forward.
 // Encoder setup
+
 #define ENCODER_OPTIMIZE_INTERRUPTS //Only for Teensy or Arduino
 #define ENCODER_USE_INTERRUPTS
 #include <Encoder.h>
@@ -13,11 +14,7 @@
 // #include "ros/time.h"
 #include <std_msgs/Int32.h>
 #include <std_msgs/String.h>
-// #include "sensor_msgs/Imu.h"
-// #include <geometry_msgs/Twist.h>
 #include <std_msgs/Empty.h>
-// #include <Adafruit_MPU6050.h>
-// #include <Adafruit_Sensor.h>
 #include <Wire.h>
 // Relay pin is controlled with D8. The active wire is connected to Normally Closed and common
 int relay = 8;
@@ -31,13 +28,6 @@ int d4=0;
 long low_wrap = -2147483647;
 long high_wrap = 2147483647;
 
-// float nNow
-// unsigned long nLastCompute
-// #define unsigned long nLastCompute = 0
-// int motorTimer;
-// int distance = 0;
-// #define herbie_speed = 0;
-
 int LED1 = 5;      // _slow_
 int led2 = 6;  // medium
 int led3 = 7;  // _fast_
@@ -48,19 +38,7 @@ Encoder encoderRight( 3, 2 ); // Pins on Mega for MOTOR A encoder data (Had to b
 Encoder encoderLeft( 19, 18 ); // pins on Mega for MOTOR B encoder data
 
 ros::NodeHandle nh;
-// nLastCompute = millis();
 
-// Callbacks
-
-// void resetCb( const std_msgs::Empty& reset)
-// {
-//  encoderLeft.write(0);
-//  encoderRight.write(0);
-//  nh.loginfo("Reset both wheel encoders to zero");
-// }
-
-// sensor_msgs::Imu imu_msg; 
-// ros::Publisher imu_pub("imu/data", &imu_msg);
 
 // std_msgs::String str_msg;
 std_msgs::Int32 encoder_left_value, encoder_right_value, distance_value;
@@ -69,10 +47,6 @@ ros::Publisher encoder_right_pub("encoder_right_value", &encoder_right_value);
 // ros::Publisher herbie_speed_pub("herbie_speed", &str_msg);
 ros::Publisher distance_pub("distance_value", &distance_value);
 
-// ros::Subscriber<std_msgs::Int32> sub("motor_left", &left_motorCb);
-// ros::Subscriber<std_msgs::Int32> sub_2("motor_right", &right_motorCb);
-// ros::Subscriber<std_msgs::Empty> sub_reset("reset", resetCb); 
-// ros::Subscriber<geometry_msgs::Twist> sub("/jet_drive_controller/cmd_vel", &messageCb );
  
 void setup()
 {
@@ -84,9 +58,7 @@ void setup()
   pinMode(LED1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
-//  nh.subscribe(sub);
-//  nh.subscribe(sub_reset);
-//  nh.subscribe(sub_2);
+
   nh.loginfo("Wheel Encoders:");
   nh.advertise(encoder_left_pub);
   nh.advertise(encoder_right_pub);
@@ -106,8 +78,6 @@ while (!nh.connected())
 
 void loop()
 {
-// nNow = millis();
-// nChange = nNow - nLastCompute;
   long newLeft, newRight;
   newLeft = encoderLeft.read();
   newRight = encoderRight.read();
@@ -120,8 +90,6 @@ void loop()
   if (newRight < low_wrap) {newRight = 0;
   }
   
-//  vl = (newLeft  - savedLeft ) / nChange;
-//  vr = (newRight - savedRight) / nChange;
   vl = (newLeft  - savedLeft );
   vr = (newRight - savedRight);
   d1 = (vl + vr)/2;
@@ -173,9 +141,7 @@ void loop()
     z=0;
   }
 
-//  str_msg.data = speed;
-//  herbie_speed_pub.publish( &str_msg );
-  
+ 
   nh.spinOnce();
 
   delay(20);
