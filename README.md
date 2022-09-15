@@ -9,3 +9,6 @@ The spray wand mounts to a servo to move it left/right. Herbie uses the OpenCV O
 The servo is directed to one of about 15 positions in the Y dimension by the Raspi as the AI detects weeds amongst the grass. The Movidius chip in the Oak camera does the object detection routine very quickly. The wand is only about 12 inches behind the camera, and it sprayes those pesky weeds!
 
 The fore/aft (X) dimension is not addressed in Herbie_Bot v.1, the operator must watch the speed of the robot on the lawn and coordinate the spraying aim. It isn't difficult to do, a steady, slow speed works well. 
+
+# Video:
+https://www.youtube.com/watch?v=yrYpXgqC7wQ
