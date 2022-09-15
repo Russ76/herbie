@@ -1,4 +1,4 @@
-  Herbie_Bot will spray the weeds in your lawn and not spray the grass! 
+# Herbie_Bot will spray the weeds in your lawn and not spray the grass! 
 
 These gallon jugs of lawn-safe herbicide with a battery-powered spray wand are now readily available and they do a good job. However, after spraying manually for an hour with my hand and arm starting to cramp up, I realized that my Yard_Bot (mowbot/snowbot/materialbot) could do the spraying.
 
