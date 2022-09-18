@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="serial_node.py" pkg="rosserial_python" type="rosserial_python" args="/dev/ttyACM0" output="screen"/>
+  
+  <node name="main_raspi.py" pkg="herbie" type="herbie" output="screen"/>
+  
+</launch>
+
