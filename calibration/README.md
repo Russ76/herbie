@@ -1,4 +1,4 @@
-#Machine Calibration
+# Machine Calibration
 
 Effort was spent in calibrating the software to spray weeds more effectively. A hinge was added to wand servo mount so that the timing could be changed. It was found that having wand closer to camera was not an improvement. The AI processing and wand response requires the time that twelve inches of machine travel affords. Herbie should be driven at a slow walk speed, generally. If weeds are sparse, it can go faster, into the green light speed. But if weeds are heavy, it's good to slow down and allow the machine to identify and spray more of the weeds. This is the red light speed, or slow. The average speed is the yellow light, in the middle.
 
@@ -18,6 +18,6 @@ Use 15 of the 20 available servo positions, between -1.0 and 1.0
 
 Good luck! and let us know how it works out for you!
 
-#Testing the aim
+# Testing the aim
 
 https://youtube.com/shorts/lc4tx-VT3fQ
