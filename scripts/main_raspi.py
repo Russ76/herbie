@@ -178,9 +178,8 @@ with dai.Device(pipeline) as device:
     t0 = time.time()
     tm = str(t0)
     print('Time = ',tm)
-    # qRgb = device.getOutputQueue(name="rgb", maxSize=4, blocking=False)
     qDet = device.getOutputQueue(name="nn", maxSize=4, blocking=False)
-    q = device.getOutputQueue(name="out1", maxSize=4, blocking=False)
+    qRgb = device.getOutputQueue(name="out1", maxSize=4, blocking=False)
     configQueue = device.getInputQueue(configIn.getStreamName())
     sendCamConfig = False
 
@@ -231,11 +230,10 @@ with dai.Device(pipeline) as device:
 
 
     while True:
-        # inRgb = qRgb.get()
+      
         inDet = qDet.get()
-        in1 =q.tryGet()
+        in1 = qRgb.get()
         
-
         if in1 is not None:
             frame = in1.getCvFrame()
             cv2.putText(frame, "NN fps: {:.2f}".format(counter / (time.monotonic() - startTime)), (2, frame.shape[0] - 4), cv2.FONT_HERSHEY_TRIPLEX, 0.4, color2)
