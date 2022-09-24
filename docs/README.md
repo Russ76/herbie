@@ -44,9 +44,7 @@ Start Raspi in headless mode.
 ssl into Raspi, not as root.
 
 
-Change directory to "wide-weeds"
-
-Start program with "python3 main_api12.py" (Make a launch file to do all software start, rosserial and weed-detect, and adjust paths so that it works, first time! Will have to be in catkin_ws/src/herbie. Ino code under /firmware) 
+Start program with "python3 main_raspi.py" (Make a launch file to do all software start, rosserial and weed-detect, and adjust paths so that it works, first time! Will have to be in catkin_ws/src/herbie. Ino code under /firmware) 
 
 
 # The AI model was developed in this way:
