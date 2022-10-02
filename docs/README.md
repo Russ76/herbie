@@ -41,10 +41,13 @@ Physically install the Raspi into a suitable yard robot with sprayer.
 
 Start Raspi in headless mode.
 
-ssl into Raspi, not as root.
+From laptop on same network as Raspberry Pi, open a terminal window and ssh into Raspi.
 
+In first terminal window, start roscore.
 
-Start program with "python3 main_raspi.py" (Make a launch file to do all software start, rosserial and weed-detect, and adjust paths so that it works, first time! Will have to be in catkin_ws/src/herbie. Ino code under /firmware) 
+Open another terminal, ssh into Raspi and type "rosrun rosserial_python serial_node.py /dev/ttyACM0"
+
+In another terminal window into Raspi, type "rosrun herbie main_raspi.py"
 
 
 # The AI model was developed in this way:
