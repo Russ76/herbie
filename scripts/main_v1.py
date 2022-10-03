@@ -49,9 +49,9 @@ if pmp == "P" or pmp == "p":
 # parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", "--model", help="Provide model name or model path for inference",
-                    default='/home/pi/wide-weeds/openvino/result_openvino_2021.4_6shave.blob', type=str)
+                    default='~/catkin_ws/src/herbie/supporting/openvino/result_openvino_2021.4_6shave.blob', type=str)
 parser.add_argument("-c", "--config", help="Provide config path for inference",
-                    default='/home/pi/wide-weeds/openvino/result.json', type=str)
+                    default='~/catkin_ws/src/herbie/supporting/openvino/result.json', type=str)
 args = parser.parse_args()
 
 # parse config
