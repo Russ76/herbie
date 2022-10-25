@@ -38,7 +38,7 @@ int pwrLeft = 64;  // start with brakes on
 int pwrRight = 192; // this is Sabertooth's method of simplified serial
 // Each motor has 7 bits of speed resolution. One wire used for both motors
 // Angular boost makes turning stronger, useful for skid steer or tracked units
-float angularboost = 1.4;
+float angularboost = 1.2;
 float linx;
 float angZ;
 
@@ -68,7 +68,7 @@ ros::NodeHandle nh;
 
 void messageCb( const geometry_msgs::Twist& msg)
 {
-  linx = msg.linear.x * 70;
+  linx = msg.linear.x * 80;
   angZ = msg.angular.z * -70 * angularboost;
 
 // Twist data converted into motor commands here
