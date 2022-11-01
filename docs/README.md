@@ -8,7 +8,7 @@ Both software versions are included in this repo, so you can build whichever is 
 # Software Installation
 
 Herbie_v1 doesn't require ROS or the Mega.
-Herbie_v2 requires ROS and wheel encoders and the Mega board. It is more accurate for spraying weeds.
+Herbie_v2 requires ROS and wheel encoders and the Arduino Mega board. It is more accurate for spraying weeds.
 
 The Raspberry Pi OS must be Raspi Buster, 64 bit. Ubuntu is better for ROS but worse for the GPIO pin control and use. And we need GPIO for the pump relay and the wand servo.
 
