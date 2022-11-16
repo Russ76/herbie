@@ -6,6 +6,8 @@ drive_cmd_vel - Use this sketch if you want to drive Herbie with ROS, sending cm
 
 The Teensy4.0 folder was added since this little board performs better than Mega when loading up with tasks. The Mega couldn't publish the IMU and encoder messages quick enough (to satify discerning users) when it had to also handle cmd_vel. Teensy does it at 35/second with a substantial delay built into main loop! However, if you are driving your robot with RC control, the Mega is entirely sufficient. (I used joy and teleop_twist_joy on the laptop, with a large Logitech 3D controller. The X-box controller also was tested and worked well.)
 
+Teensy40_BNO055 was added to utilize this superior IMU in the robot. This has magnetic (compass) readings, which are important outside. This code also is for using cmd_vel driving. Don't pay attention to this file if you use RC to drive the robot!
+
 Good luck!
 
 
